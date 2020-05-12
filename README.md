@@ -25,5 +25,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-* Design the interface
-* Problems when loading page
+* The application isn't deployed
+
+- How did you decide on the technical and architectural choices used as part of your solution?
+    - I decided use React with Redux because it's more flexible to control states. Axios to make HTTP calls, Flexbox
+    to control the grid and rows. 
+    
+- Are there any improvements you could make to your submission?
+    - Yes, I'll add Pagination, Details Pages, Join Shows with Movies, Responsive page.
+ 
+- What would you do differently if you had more time?
+    - I'll planned better before starting the development and study more about React
