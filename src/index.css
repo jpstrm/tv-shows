@@ -1,0 +1,11 @@
+body {
+    font-size: 12px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+}
+
+.row {
+    display: flex;
+}

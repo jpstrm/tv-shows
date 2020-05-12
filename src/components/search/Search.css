@@ -1,0 +1,13 @@
+.search {
+    flex: 1;
+    margin: 15px 0;
+}
+
+.search > input {
+    height: 25px;
+    padding: 10px;
+    min-width: 250px;
+    min-height: 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
