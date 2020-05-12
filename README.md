@@ -25,7 +25,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-* The application isn't deployed
+### Production on Heroku
+- https://tv-show-movies-app.herokuapp.com/ (Not working)
+
+### Questions
 
 - How did you decide on the technical and architectural choices used as part of your solution?
     - I decided use React with Redux because it's more flexible to control states. Axios to make HTTP calls, Flexbox
