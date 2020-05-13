@@ -3,9 +3,13 @@ import './ShowOverview.css';
 import ShowImg from './ShowImg';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { findLastEpisode } from '../../../store/actions/showsActions';
+import { clearEpisode, findLastEpisode } from '../../../store/actions/showsActions';
 
 class ShowOverview extends Component {
+
+    componentWillUnmount() {
+        this.props.clearEpisode();
+    }
 
     render() {
         const { show, episode } = this.props;
@@ -31,5 +35,8 @@ const mapToProps = state => ({
     show: state.shows.selected,
     episode: state.shows.episode,
 });
-const mapDispatchToProps = dispatch => bindActionCreators({ findLastEpisode }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({
+    findLastEpisode,
+    clearEpisode
+}, dispatch);
 export default connect(mapToProps, mapDispatchToProps)(ShowOverview);

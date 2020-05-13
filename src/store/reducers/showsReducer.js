@@ -30,6 +30,11 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 episode: action.payload
             };
+        case actions.SHOWS_CLEAR_EPISODE:
+            return {
+                ...state,
+                episode: {}
+            };
         default:
             return state;
     }
