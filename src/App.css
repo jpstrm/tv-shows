@@ -5,3 +5,9 @@
     align-items: stretch;
     text-align: center;
 }
+
+.App a {
+    flex-basis: 100%;
+    text-decoration: none;
+    color: inherit;
+}

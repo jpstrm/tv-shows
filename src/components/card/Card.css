@@ -1,15 +1,18 @@
 .Card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 5px;
     min-height: 295px;
     min-width: 210px;
 }
 
 .Card.no-img {
-    border: 3px solid forestgreen;
     font-size: 24px;
+    font-weight: bolder;
+    background-image: url("../../assets/no-img.png");
 }
-
+.Card.no-img a p {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

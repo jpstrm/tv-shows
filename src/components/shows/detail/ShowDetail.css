@@ -1,0 +1,9 @@
+.ShowDetail {
+    margin: 15px;
+}
+
+.ShowDetail .Card a {
+    cursor: none;
+    text-decoration: none;
+    color: inherit;
+}

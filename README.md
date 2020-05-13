@@ -38,4 +38,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     - Yes, I'll add Pagination, Details Pages, Join Shows with Movies, Responsive page.
  
 - What would you do differently if you had more time?
+    - Change from angular where I have more experience
     - I'll planned better before starting the development and study more about React

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import './ShowList.css';
 import { findAll } from '../../store/actions/showsActions';
 import Card from '../card/Card';
-import If from '../commons/If';
+import ShowImg from './detail/ShowImg';
 
 /**
  * TODO Add pagination
@@ -20,16 +20,9 @@ class ShowList extends Component {
         const shows = this.props.list || [];
 
         const cardItems = shows.map(show => {
-            const image = show.image ? show.image.medium : '';
-
             return (
-                <Card key={show.id}  hasImg={!!image}>
-                    <If test={image}>
-                        <img src={image} alt="Show"/>
-                    </If>
-                    <If test={!image}>
-                        <p>{show.name}</p>
-                    </If>
+                <Card key={show.id}  hasImg={!!show.image}>
+                    <ShowImg show={show}/>
                 </Card>
             )
         });

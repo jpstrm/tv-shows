@@ -2,7 +2,7 @@ import React from 'react';
 import './Search.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { search, updateSearch } from '../../store/actions/showsActions';
+import { searchByName, updateSearch } from '../../store/actions/showsActions';
 
 /**
  * TODO Need added automatically search
@@ -14,7 +14,7 @@ function Search(props) {
     function keyPressed(event) {
         if (event.key === 'Enter') {
             props.updateSearch(event);
-            props.search();
+            props.searchByName();
         }
     }
     return (
@@ -28,5 +28,5 @@ function Search(props) {
 }
 
 const mapToProps = state => ({ searchValue: state.shows.search });
-const mapDispatchToProps = dispatch => bindActionCreators({ search, updateSearch }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ searchByName, updateSearch }, dispatch);
 export default connect(mapToProps, mapDispatchToProps)(Search)
