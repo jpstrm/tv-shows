@@ -1,3 +1,3 @@
 export const CONFIG = {
-    apiUrl: 'http://api.tvmaze.com'
+    apiUrl: 'https://api.tvmaze.com'
 };
