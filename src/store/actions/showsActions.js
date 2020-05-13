@@ -67,8 +67,8 @@ export const findLastEpisode = () => {
     }
 };
 
-export const clearEpisode = () => ({
-    type: actions.SHOWS_CLEAR_EPISODE
+export const clearSelected = () => ({
+    type: actions.SHOWS_CLEAR_SELECTED
 });
 
 const mapToShow = (show) => (

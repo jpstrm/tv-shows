@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './ShowDetail.css';
 import { bindActionCreators } from 'redux';
 import { Link, Route, Switch } from 'react-router-dom';
-import { findById } from '../../../store/actions/showsActions';
+import { clearSelected, findById } from '../../../store/actions/showsActions';
 import ShowOverview from './ShowOverview';
 import ShowEpisodes from './ShowEpisodes';
 import ShowDescription from './ShowDescription';
@@ -15,6 +15,11 @@ class ShowDetail extends Component {
     componentDidMount() {
         const { id } = this.props.match.params || 1;
         this.props.findById(id);
+    }
+
+    componentWillUnmount() {
+        console.log(this.props);
+        this.props.clearSelected();
     }
 
     render() {
@@ -52,12 +57,12 @@ class ShowDetail extends Component {
                     </Switch>
                 </div>
                 <div className="row menu">
-                    <div>
-                        <Link to={`${url}/overview`}>Overview </Link>
-                        <Link to={`${url}/episodes`}>Episodes </Link>
-                        <Link to={`${url}/details`}>Details </Link>
-                        <Link to={`${url}/cast`}>Cast</Link>
-                    </div>
+                    <ul>
+                        <li><Link to={`${url}/overview`}>Overview </Link></li>
+                        <li><Link to={`${url}/episodes`}>Episodes </Link></li>
+                        <li><Link to={`${url}/details`}>Details </Link></li>
+                        <li><Link to={`${url}/cast`}>Cast</Link></li>
+                    </ul>
                 </div>
             </div>
         );
@@ -65,5 +70,5 @@ class ShowDetail extends Component {
 }
 
 const mapToProps = state => ({ show: state.shows.selected });
-const mapDispatchToProps = dispatch => bindActionCreators({ findById }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ findById, clearSelected }, dispatch);
 export default connect(mapToProps, mapDispatchToProps)(ShowDetail);

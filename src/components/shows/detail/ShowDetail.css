@@ -12,6 +12,28 @@
     flex: 1;
     margin: 15px 0;
     justify-content: center;
+    width: 100%;
+}
+
+.menu ul {
+    margin: 0; padding: 0;
+    float: left;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    float: left; text-decoration: none;
+    color: white;
+    padding: 10px 11px;
+    background-color: #80ced6;
+}
+
+.menu ul li a:hover, .menu ul li .current {
+    color: #fff;
+    background-color: #d5f4e6;
 }
 
 .ShowDetail .content {
@@ -27,8 +49,10 @@
 
 
 .ShowDetail .row.menu a {
+    display: flex;
+    height: 100%;
+    align-items: center;
     text-decoration: none;
     color: inherit;
     font-size: 18px;
-    height: 28px;
 }
