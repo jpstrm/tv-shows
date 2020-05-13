@@ -12,6 +12,8 @@ class ShowOverview extends Component {
         if (show.id && !episode.id) {
             this.props.findLastEpisode();
         }
+        const schedule = show.schedule || {};
+        schedule.days = schedule.days || [];
 
         return (
             <div className="ShowOverview">
@@ -20,7 +22,14 @@ class ShowOverview extends Component {
                 </div>
                 <div className="details">
                     <p className="title">{show.name}</p>
-                    <p className="season">Season <strong>{episode.season}</strong></p>
+                    <p className="season">Season: <strong>{episode.season}</strong></p>
+                    <p className="season">
+                        Schedule: <span>{schedule.days.join(', ')} </span>
+                        at <strong>{schedule.time}</strong>
+                    </p>
+                    <p className="season">Status: <strong>{show.status}</strong></p>
+                    <p className="season">Show Type: <strong>{show.type}</strong></p>
+                    <p className="season">Genres: <strong>{show.type}</strong></p>
                 </div>
             </div>
         );
