@@ -22,7 +22,7 @@ class ShowOverview extends Component {
                 <div className="img">
                     <ShowImg show={show}/>
                 </div>
-                <div>
+                <div className="details">
                     <p className="title">{show.name}</p>
                     <p className="season">Season <strong>{episode.season}</strong></p>
                 </div>
