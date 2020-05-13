@@ -1,6 +1,6 @@
-import './ShowImg.css';
-import If from '../../commons/If';
 import React from 'react';
+import If from '../../commons/If';
+import './EpisodeImg.css'
 
 export default function EpisodeImg(props){
     const { episode } = props;
