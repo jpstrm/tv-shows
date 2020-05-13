@@ -9,13 +9,11 @@ export default class ShowApi {
     };
 
     findLastEpisode = (_links) => {
-        _links = _links || '';
-        if (_links) {
-            return axios.get(_links.previousepisode.href)
-                .then((({data}) => data));
-        } else {
-            return Promise.resolve({});
-        }
+        const { href } = _links.previousepisode;
+        const url = href.replace('http', 'https');
+
+        return axios.get(url)
+            .then((({data}) => data));
     };
 
     findAll = () => {

@@ -1,18 +1,18 @@
 .ShowOverview {
     flex: 1;
     display: flex;
-}
-
-.ShowOverview div:first-child {
-    flex: 1;
-}
-
-.ShowOverview div:last-child {
-    flex-grow: 1;
+    justify-content: center;
 }
 
 .ShowOverview .img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
     margin-right: 15px;
+}
+
+.ShowOverview div:last-child {
+    flex: 1;
 }
 
 .ShowOverview .title, .ShowOverview .season {

@@ -7,3 +7,28 @@
     text-decoration: none;
     color: inherit;
 }
+
+.ShowDetail .row.menu {
+    flex: 1;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.ShowDetail .content {
+    min-height: 300px;
+}
+
+.ShowDetail .row.menu div {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    white-space: pre;
+}
+
+
+.ShowDetail .row.menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    height: 28px;
+}
