@@ -1,0 +1,29 @@
+.ShowEpisodes {
+    display: flex;
+    flex-direction: column;
+}
+.ShowEpisodes .seasons {
+    margin-bottom: 15px;
+}
+.ShowEpisodes .seasons select {
+    background-color: #059BE6;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ShowEpisodes .episodes {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: auto;
+    max-height: 300px;
+}
+
+.ShowEpisodes .episodes img {
+    height: 90px;
+}

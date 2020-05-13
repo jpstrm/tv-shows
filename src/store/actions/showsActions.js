@@ -49,6 +49,29 @@ export const findById = (id) => {
             dispatch({
                 type: actions.SHOWS_FIND_ONE,
                 payload: show
+            });
+        });
+    }
+};
+
+export const findAllSeasons = () => {
+    return (dispatch, getState) => {
+        const showId = getState().shows.selected.id;
+        new ShowApi().findAllSeasons(showId).then(show => {
+            dispatch({
+                type: actions.SHOWS_SEASONS_FETCHED,
+                payload: show
+            })
+        });
+    }
+};
+
+export const findAllEpisodes = (season) => {
+    return (dispatch) => {
+        new ShowApi().findAllEpisodesBySeason(season).then(episodes => {
+            dispatch({
+                type: actions.SHOWS_EPISODES_FETCHED,
+                payload: episodes
             })
         });
     }

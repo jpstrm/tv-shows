@@ -4,7 +4,9 @@ const INITIAL_STATE = {
     list: [],
     search: '',
     selected: {},
-    episode: {}
+    seasons: [],
+    episodeList: [],
+    episode: {},
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -25,6 +27,11 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 selected: action.payload
             };
+        case actions.SHOWS_SEASONS_FETCHED:
+            return {
+                ...state,
+                seasons: action.payload
+            };
         case actions.SHOWS_FIND_LAST_EPISODE:
             return {
                 ...state,
@@ -35,6 +42,11 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 selected: {},
                 episode: {}
+            };
+        case actions.SHOWS_EPISODES_FETCHED:
+            return {
+                ...state,
+                episodeList: action.payload
             };
         default:
             return state;

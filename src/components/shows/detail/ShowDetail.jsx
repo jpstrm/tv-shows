@@ -18,7 +18,6 @@ class ShowDetail extends Component {
     }
 
     componentWillUnmount() {
-        console.log(this.props);
         this.props.clearSelected();
     }
 

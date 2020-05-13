@@ -8,6 +8,16 @@ export default class ShowApi {
             .then((({data}) => data));
     };
 
+    findAll = () => {
+        return axios.get(`${CONFIG.apiUrl}/shows`)
+            .then((({data}) => data));
+    };
+
+    findAllSeasons = (showId) => {
+        return axios.get(`${CONFIG.apiUrl}/shows/${showId}/seasons`)
+            .then((({data}) => data));
+    };
+
     findLastEpisode = (_links) => {
         const { href } = _links.previousepisode;
         const url = href.replace('http', 'https');
@@ -16,8 +26,8 @@ export default class ShowApi {
             .then((({data}) => data));
     };
 
-    findAll = () => {
-        return axios.get(`${CONFIG.apiUrl}/shows`)
+    findAllEpisodesBySeason = (showId, season) => {
+        return axios.get(`${CONFIG.apiUrl}/shows/${showId}/episodes`)
             .then((({data}) => data));
     };
 
