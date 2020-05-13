@@ -3,10 +3,6 @@
     display: flex;
 }
 
-.ShowOverview div:first-child {
-    flex-grow: 0;
-}
-
 .ShowOverview div:last-child {
     flex-grow: 1;
 }
